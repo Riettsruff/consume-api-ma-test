@@ -1,0 +1,756 @@
+{
+	"info": {
+		"_postman_id": "f75eb668-d4cd-4f89-a44f-9a838e5f92d2",
+		"name": "DataMATest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "basic-error-controller",
+			"item": [
+				{
+					"name": "error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/error",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"error"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "get-controller",
+			"item": [
+				{
+					"name": "getJobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/get/jobs",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"get",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMajors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/get/majors",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"get",
+								"majors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUniversities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/get/universities",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"get",
+								"universities"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "profile-controller",
+			"item": [
+				{
+					"name": "saveAddress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"city\": \"string\",\r\n  \"id\": \"string\",\r\n  \"province\": \"string\",\r\n  \"street1\": \"string\",\r\n  \"street2\": \"string\",\r\n  \"zipCode\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/address",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAddress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/address/{id}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"address",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveBasicInformation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"birthDate\": \"2020-11-13T17:53:03.733Z\",\r\n  \"email\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"id\": \"string\",\r\n  \"name\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/basic",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"basic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBasicInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/basic/{id}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"basic",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveContact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"facebook\": \"string\",\r\n  \"id\": \"string\",\r\n  \"instagram\": \"string\",\r\n  \"linkedin\": \"string\",\r\n  \"phone\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/contact",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContact",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/contact/{id}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"contact",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveCurrentOccupation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"currentCompany\": \"string\",\r\n  \"id\": \"string\",\r\n  \"job\": \"string\",\r\n  \"website\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/currentoccupation",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"currentoccupation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCurrentOccupation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/currentoccupation/{id}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"currentoccupation",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveEducation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"degree\": \"string\",\r\n  \"id\": \"string\",\r\n  \"major\": \"string\",\r\n  \"status\": \"string\",\r\n  \"university\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/education",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEducation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/profile/education/{id}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"profile",
+								"education",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "user-management-controller",
+			"item": [
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/changepassword",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/forgotpassword/{email}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"forgotpassword",
+								"{email}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPasswordByVerificationCode",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/forgotpassword/{verificationCode}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"forgotpassword",
+								"{verificationCode}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/login",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"birthDate\": \"string\",\r\n  \"currentCompany\": \"string\",\r\n  \"degree\": \"string\",\r\n  \"email\": \"string\",\r\n  \"gender\": \"string\",\r\n  \"job\": \"string\",\r\n  \"major\": \"string\",\r\n  \"name\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"status\": \"string\",\r\n  \"university\": \"string\",\r\n  \"username\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/register",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://116.254.101.228:8080/ma_test/verify/{verificationCode}",
+							"protocol": "http",
+							"host": [
+								"116",
+								"254",
+								"101",
+								"228"
+							],
+							"port": "8080",
+							"path": [
+								"ma_test",
+								"verify",
+								"{verificationCode}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b8be246c-9646-4cee-ad52-3aa4d82826b9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "51bfc11c-f6e2-446e-b877-420c2878be6c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
