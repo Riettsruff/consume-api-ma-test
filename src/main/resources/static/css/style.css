@@ -1,0 +1,208 @@
+/* 
+    Author     : Rietts
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #e9fbfe;
+  font-size: 16px;
+}
+
+form {
+  width: 100%;
+}
+
+.form-title {
+  font-weight: 100;
+}
+
+.sub-form-title,
+.info-title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* LOGIN */
+
+.login-wrapper {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-wrapper .form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-wrapper .forgot-password-form-group {
+  margin-top: -5px;
+}
+
+.login-wrapper .login-button-form-group button {
+  width: 100%;
+}
+
+.login-wrapper .register-link-form-group {
+  text-align: center;
+}
+
+/* REGISTER */
+
+.register-wrapper {
+  margin: 20px auto 25px;
+  max-width: 620px;
+}
+
+.register-wrapper .form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-wrapper .sub-form-title {
+  margin-bottom: 15px;
+}
+
+.register-wrapper .sub-form-wrapper {
+  background-color: rgba(0, 0, 0, 0.015);
+  padding: 10px 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.register-wrapper .register-button-form-group button {
+  width: 100%;
+}
+
+.register-wrapper .login-link-form-group {
+  text-align: center;
+}
+
+/* FORGOT PASSWORD */
+
+.forgot-password-wrapper {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forgot-password-wrapper .form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password-wrapper .instruction-form-group {
+  margin-bottom: 30px;
+}
+
+.forgot-password-wrapper .send-button-form-group button {
+  width: 100%;
+}
+
+.forgot-password-wrapper .login-link-form-group {
+  text-align: center;
+}
+
+/* RESET PASSWORD */
+
+.reset-password-wrapper {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reset-password-wrapper .form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reset-password-wrapper .reset-button-form-group button {
+  width: 100%;
+}
+
+.reset-password-wrapper .login-link-form-group {
+  text-align: center;
+}
+
+/* PROFILE */
+
+.profile-wrapper {
+  margin-top: 30px;
+}
+
+.profile-wrapper .header-profile .inner-header-profile {
+  border-bottom: 5px solid #eee;
+  padding-bottom: 30px;
+}
+
+.profile-wrapper .header-profile .header-main-content {
+  line-height: 1;
+  font-size: 1.25em;
+}
+
+.profile-wrapper .header-profile .header-main-content .greetings-text {
+  margin-bottom: 10px;
+}
+
+.profile-wrapper .header-profile .header-main-content .emphasis-text {
+  font-weight: 500;
+}
+
+.profile-wrapper .body-profile {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.profile-wrapper .body-profile .box-info {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.profile-wrapper .body-profile .header-box-info {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-wrapper .body-profile .body-box-info {
+  padding: 10px;
+}
+
+.profile-wrapper .body-profile .body-box-info .field-name {
+  padding-right: 20px;
+}
+
+.profile-wrapper .body-profile .body-box-info .field-value {
+  padding-left: 20px;
+}
