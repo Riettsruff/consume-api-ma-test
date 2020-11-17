@@ -1,7 +1,4 @@
-const CURRENT_PATHNAME = 
-  $(location)
-    .attr("pathname")
-    .replace(/\/$/, "");
+const CURRENT_PATHNAME = $(location).attr("pathname");
 
 $(function() {
   switch(CURRENT_PATHNAME) {

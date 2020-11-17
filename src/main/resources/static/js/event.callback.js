@@ -233,7 +233,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalContactCSubmitlicked() {
+    function modalContactSubmitClicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#kontak-id-user"),
         phone: currentModal.find("#kontak-nomor-hp"),
