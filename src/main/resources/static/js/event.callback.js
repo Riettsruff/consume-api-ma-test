@@ -335,7 +335,7 @@ switch(CURRENT_PATHNAME) {
 
   break;
 
-  case "/forgot-password":
+  case "/forgotpassword":
 
     function forgotPasswordFormSubmitClicked(currentForm) {
       const htmlInput = {

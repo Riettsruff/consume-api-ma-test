@@ -54,7 +54,7 @@ $(function() {
 
     break;
 
-    case "/forgot-password":
+    case "/forgotpassword":
 
       const forgotPasswordForm = $(".forgot-password-form");
 

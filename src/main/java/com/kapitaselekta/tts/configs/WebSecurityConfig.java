@@ -29,8 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     "/js/**", 
                     "/img/**", 
                     "/register", 
-                    "/forgot-password", 
-                    "/reset-password",
+                    "/forgotpassword/**",
                     "/"
                 ).permitAll()
                 .anyRequest().authenticated()
