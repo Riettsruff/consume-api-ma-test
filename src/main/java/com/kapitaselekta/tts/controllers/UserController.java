@@ -6,6 +6,11 @@
 package com.kapitaselekta.tts.controllers;
 
 import com.kapitaselekta.tts.entities.LoginInput;
+import com.kapitaselekta.tts.entities.BasicInformation;
+import com.kapitaselekta.tts.entities.Address;
+import com.kapitaselekta.tts.entities.Contact;
+import com.kapitaselekta.tts.entities.CurrentOccupation;
+import com.kapitaselekta.tts.entities.Education;
 import com.kapitaselekta.tts.services.rest.UserRestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,13 +30,26 @@ public class UserController {
     UserRestService userRestService;
     
     @GetMapping("/")
-    public String index() {
+    public String index(Model model) {
+        BasicInformation basicInformation = userRestService.getBasicInformation("USER-00099");
+        Address address = userRestService.getAddress("USER-00099");
+        Contact contact = userRestService.getContact("USER-00099");
+        CurrentOccupation currentOccupation = userRestService.getCurrentOccupation("USER-00099");
+        Education education = userRestService.getEducation("USER-00099");
+        
+        model.addAttribute("basicInformation", basicInformation);
+        model.addAttribute("address", address);
+        model.addAttribute("contact", contact);
+        model.addAttribute("currentOccupation", currentOccupation);
+        model.addAttribute("education", education);
+        
         return "index";
     }
     
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("login", new LoginInput());
+        
         return "login";
     }
     
@@ -48,6 +66,7 @@ public class UserController {
     @GetMapping("/forgotpassword/{verificationCode}")
     public String resetPassword(Model model, @PathVariable String verificationCode) {
         model.addAttribute("verificationCode", verificationCode);
+        
         return "reset-password";
     }
     

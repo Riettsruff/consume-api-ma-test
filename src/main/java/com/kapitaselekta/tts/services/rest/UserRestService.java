@@ -6,10 +6,18 @@
 package com.kapitaselekta.tts.services.rest;
 
 import com.kapitaselekta.tts.entities.LoginInput;
+import com.kapitaselekta.tts.entities.BasicInformation;
+import com.kapitaselekta.tts.entities.Address;
+import com.kapitaselekta.tts.entities.Contact;
+import com.kapitaselekta.tts.entities.CurrentOccupation;
+import com.kapitaselekta.tts.entities.Education;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -35,5 +43,60 @@ public class UserRestService {
         String result = restTemplate.postForObject(uri + "/login", args, String.class);
         
         return result;
+    }
+    
+    public BasicInformation getBasicInformation(String id) {
+        ResponseEntity<BasicInformation> response = restTemplate.exchange(
+            uri + "/profile/basic/" + id,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<BasicInformation>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public Address getAddress(String id) {
+        ResponseEntity<Address> response = restTemplate.exchange(
+            uri + "/profile/address/" + id,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<Address>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public Contact getContact(String id) {
+        ResponseEntity<Contact> response = restTemplate.exchange(
+            uri + "/profile/contact/" + id,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<Contact>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public CurrentOccupation getCurrentOccupation(String id) {
+        ResponseEntity<CurrentOccupation> response = restTemplate.exchange(
+            uri + "/profile/currentoccupation/" + id,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<CurrentOccupation>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public Education getEducation(String id) {
+        ResponseEntity<Education> response = restTemplate.exchange(
+            uri + "/profile/education/" + id,
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<Education>() {}
+        );
+        
+        return response.getBody();
     }
 }
