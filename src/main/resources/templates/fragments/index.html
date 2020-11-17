@@ -1,0 +1,328 @@
+<!-- PROFILE WRAPPER START -->
+<div class="profile-wrapper" th:fragment="profile-wrapper">
+    <div class="header-profile">
+      <div class="container">
+        <div class="inner-header-profile d-flex justify-content-between">
+          <div class="header-main-content d-flex flex-column">
+            <span class="greetings-text">Hi, <span class="emphasis-text">[${#httpServletRequest.remoteUser}]</span></span>
+            <span class="info-text">Selamat Datang di Halaman Profil Anda.</span>
+          </div>
+          <div class="header-nav">
+            <a href="logout" class="logout-button btn btn-danger">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-profile">
+      <div class="container">
+        <div class="box-info area-informasi-dasar">
+          <div class="header-box-info d-flex justify-content-between align-items-center">
+            <h6 class="info-title">Informasi Dasar</h6>
+            <div class="info-action-wrapper">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modal-informasi-dasar">Edit</button>
+            </div>
+          </div>
+          <div class="body-box-info">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="field-name">Nama</td>
+                  <td class="field-value">Rietts Andreas Ruff</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Email</td>
+                  <td class="field-value">riettsruff@gmail.com</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Jenis Kelamin</td>
+                  <td class="field-value">Laki-laki</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Tanggal Lahir</td>
+                  <td class="field-value">05-12-2000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="box-info area-pekerjaan-saat-ini">
+          <div class="header-box-info d-flex justify-content-between align-items-center">
+            <h6 class="info-title">Pekerjaan Saat Ini</h6>
+            <div class="info-action-wrapper">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modal-pekerjaan-saat-ini">Edit</button>
+            </div>
+          </div>
+          <div class="body-box-info">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="field-name">Jabatan</td>
+                  <td class="field-value">Mahasiswa</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Instansi</td>
+                  <td class="field-value">Universitas Kristen Satya Wacana</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Website</td>
+                  <td class="field-value">https://uksw.edu</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="box-info area-pendidikan">
+          <div class="header-box-info d-flex justify-content-between align-items-center">
+            <h6 class="info-title">Pendidikan</h6>
+            <div class="info-action-wrapper">
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modal-pendidikan">Edit</button>
+            </div>
+          </div>
+          <div class="body-box-info">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="field-name">Tingkat</td>
+                  <td class="field-value">Strata 1</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Instansi</td>
+                  <td class="field-value">Universitas Kristen Satya Wacana</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Jurusan</td>
+                  <td class="field-value">Teknik Informatika</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Status</td>
+                  <td class="field-value">Belum Lulus</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="box-info area-alamat">
+          <div class="header-box-info d-flex justify-content-between align-items-center">
+            <h6 class="info-title">Alamat</h6>
+            <div class="info-action-wrapper">
+              <button class="btn btn-primary">Edit</button>
+            </div>
+          </div>
+          <div class="body-box-info">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="field-name">Provinsi</td>
+                  <td class="field-value">Jawa Tengah</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Kota</td>
+                  <td class="field-value">Salatiga</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Nama Jalan 1</td>
+                  <td class="field-value">Jl. Turen 1 No.86 M</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Nama Jalan 2</td>
+                  <td class="field-value">-</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Kode Pos</td>
+                  <td class="field-value">50714</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="box-info area-kontak">
+          <div class="header-box-info d-flex justify-content-between align-items-center">
+            <h6 class="info-title">Kontak</h6>
+            <div class="info-action-wrapper">
+              <button class="btn btn-primary">Edit</button>
+            </div>
+          </div>
+          <div class="body-box-info">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="field-name">Nomor HP</td>
+                  <td class="field-value">081327785905</td>
+                </tr>
+                <tr>
+                  <td class="field-name">ID Facebook</td>
+                  <td class="field-value">921828128182</td>
+                </tr>
+                <tr>
+                  <td class="field-name">Username Instagram</td>
+                  <td class="field-value">riettsruff</td>
+                </tr>
+                <tr>
+                  <td class="field-name">URL Linkedin</td>
+                  <td class="field-value">
+                    <a href="https://riettsruff.com">https://riettsruff.com</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- PROFILE WRAPPER END -->
+
+<!-- INFORMASI DASAR MODAL START -->
+<div class="modal fade" id="modal-informasi-dasar" tabindex="-1" aria-hidden="true" th:fragment="modal-informasi-dasar">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Informasi Dasar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-informasi-dasar">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-nama">Nama</label>
+              <input type="text" id="pendaftaran-nama" class="form-control" name="name" required />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-email">Email</label>
+              <input type="email" id="pendaftaran-nama" class="form-control" name="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-jenis-kelamin">Jenis Kelamin</label>
+              <select id="pendaftaran-jenis-kelamin" class="form-control" name="jenis-kelamin" required>
+                <option value="" disabled selected>- Pilih -</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-tanggal-lahir">Tanggal Lahir</label>
+              <input type="text" id="pendaftaran-tanggal-lahir" class="form-control" name="tanggal-lahir" required />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- INFORMASI DASAR MODAL END -->
+
+<!-- PEKERJAAN SAAT INI MODAL START -->
+<div class="modal fade" id="modal-pekerjaan-saat-ini" tabindex="-1" aria-hidden="true" th:fragment="modal-pekerjaan-saat-ini">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Pekerjaan Saat Ini</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-pekerjaan-saat-ini">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-jabatan-pekerjaan">Jabatan</label>
+              <input type="text" id="pendaftaran-jabatan-pekerjaan" class="form-control" name="jabatan-pekerjaan" required />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-instansi-pekerjaan">Instansi</label>
+              <input type="text" id="pendaftaran-instansi-pekerjaan" class="form-control" name="instansi-pekerjaan" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pendaftaran-website-pekerjaan">Website</label>
+            <input type="text" id="pendaftaran-website-pekerjaan" class="form-control" name="website-pekerjaan" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PEKERJAAN SAAT INI MODAL END -->
+
+<!-- PENDIDIKAN MODAL START -->
+<div class="modal fade" id="modal-pendidikan" tabindex="-1" aria-hidden="true" th:fragment="modal-pendidikan">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Pendidikan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-pendidikan">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-tingkat-pendidikan">Tingkat</label>
+              <input type="text" id="pendaftaran-tingkat-pendidikan" class="form-control" name="tingkat-pendidikan" required />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-instansi-pendidikan">Instansi</label>
+              <select id="pendaftaran-instansi-pendidikan" class="form-control" name="instansi-pendidikan" required>
+                <option value="" disabled selected>- Pilih -</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-jurusan-pendidikan">Jurusan</label>
+              <select id="pendaftaran-jurusan-pendidikan" class="form-control" name="jurusan-pendidikan" required>
+                <option value="" disabled selected>- Pilih -</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="pendaftaran-status-pendidikan">Status</label>
+              <select id="pendaftaran-status-pendidikan" class="form-control" name="status-pendidikan" required>
+                <option value="" disabled selected>- Pilih -</option>
+                <option value="Lulus">Lulus</option>
+                <option value="Belum Lulus">Belum Lulus</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- PENDIDIKAN MODAL END -->
+
+<!-- ALAMAT MODAL START -->
+<div class="modal fade" id="modal-alamat" tabindex="-1" aria-hidden="true" th:fragment="modal-alamat">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Alamat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-alamat">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ALAMAT MODAL END -->
