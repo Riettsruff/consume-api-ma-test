@@ -176,29 +176,29 @@
 <div class="modal fade" id="modal-informasi-dasar" tabindex="-1" aria-hidden="true" th:fragment="modal-informasi-dasar">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit Informasi Dasar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-informasi-dasar">
+      <form class="form-informasi-dasar">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Informasi Dasar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <input type="hidden" id="informasi-dasar-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="informasi-dasar-nama">Nama</label>
-              <input type="text" id="informasi-dasar-nama" class="form-control" required />
+              <input type="text" id="informasi-dasar-nama" class="form-control" data-label="Nama" data-format="PLAIN" data-required="required" />
             </div>
             <div class="form-group col-md-6">
               <label for="informasi-dasar-email">Email</label>
-              <input type="email" id="informasi-dasar-email" class="form-control"  required />
+              <input type="text" id="informasi-dasar-email" class="form-control" data-label="Email" data-format="EMAIL" data-required="required" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="informasi-dasar-jenis-kelamin">Jenis Kelamin</label>
-              <select id="informasi-dasar-jenis-kelamin" class="form-control" required>
+              <select id="informasi-dasar-jenis-kelamin" class="form-control" data-label="Jenis Kelamin" data-format="PLAIN" data-required="required">
                 <option value="" disabled selected>- Pilih -</option>
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
@@ -206,14 +206,14 @@
             </div>
             <div class="form-group col-md-6">
               <label for="informasi-dasar-tanggal-lahir">Tanggal Lahir</label>
-              <input type="text" id="informasi-dasar-tanggal-lahir" class="form-control" required />
+              <input type="text" id="informasi-dasar-tanggal-lahir" class="form-control" data-label="Tanggal Lahir" data-format="PLAIN" data-required="required" />
             </div>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="submit-button btn btn-primary">Update</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="submit-button btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -223,34 +223,34 @@
 <div class="modal fade" id="modal-pekerjaan-saat-ini" tabindex="-1" aria-hidden="true" th:fragment="modal-pekerjaan-saat-ini">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit Pekerjaan Saat Ini</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-pekerjaan-saat-ini">
+      <form class="form-pekerjaan-saat-ini">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Pekerjaan Saat Ini</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <input type="hidden" id="pekerjaan-saat-ini-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="jabatan-pekerjaan-saat-ini">Jabatan</label>
-              <input type="text" id="jabatan-pekerjaan-saat-ini" class="form-control" required />
+              <input type="text" id="jabatan-pekerjaan-saat-ini" class="form-control" data-label="Jabatan" data-format="PLAIN" data-required="required" />
             </div>
             <div class="form-group col-md-6">
               <label for="instansi-pekerjaan-saat-ini">Instansi</label>
-              <input type="text" id="instansi-pekerjaan-saat-ini" class="form-control" required />
+              <input type="text" id="instansi-pekerjaan-saat-ini" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required" />
             </div>
           </div>
           <div class="form-group">
             <label for="website-pekerjaan-saat-ini">Website</label>
-            <input type="text" id="website-pekerjaan-saat-ini" class="form-control" required />
+            <input type="text" id="website-pekerjaan-saat-ini" class="form-control" data-label="Website" data-format="URL" data-required="required" />
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="submit-button btn btn-primary">Update</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="submit-button btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -260,23 +260,23 @@
 <div class="modal fade" id="modal-pendidikan" tabindex="-1" aria-hidden="true" th:fragment="modal-pendidikan">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit Pendidikan</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-pendidikan">
+      <form class="form-pendidikan">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Pendidikan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <input type="hidden" id="pendidian-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="tingkat-pendidikan">Tingkat</label>
-              <input type="text" id="tingkat-pendidikan" class="form-control" required />
+              <input type="text" id="tingkat-pendidikan" class="form-control" data-label="Tingkat" data-format="PLAIN" data-required="required" />
             </div>
             <div class="form-group col-md-6">
               <label for="instansi-pendidikan">Instansi</label>
-              <select id="instansi-pendidikan" class="form-control" required>
+              <select id="instansi-pendidikan" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required">
                 <option value="" disabled selected>- Pilih -</option>
               </select>
             </div>
@@ -284,24 +284,24 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="jurusan-pendidikan">Jurusan</label>
-              <select id="jurusan-pendidikan" class="form-control" required>
+              <select id="jurusan-pendidikan" class="form-control" data-label="Jurusan" data-format="PLAIN" data-required="required">
                 <option value="" disabled selected>- Pilih -</option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="status-pendidikan">Status</label>
-              <select id="status-pendidikan" class="form-control" required>
+              <select id="status-pendidikan" class="form-control" data-label="Status" data-format="PLAIN" data-required="required">
                 <option value="" disabled selected>- Pilih -</option>
                 <option value="Lulus">Lulus</option>
                 <option value="Belum Lulus">Belum Lulus</option>
               </select>
             </div>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="submit-button btn btn-primary">Update</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="submit-button btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -311,44 +311,44 @@
 <div class="modal fade" id="modal-alamat" tabindex="-1" aria-hidden="true" th:fragment="modal-alamat">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit Alamat</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-alamat">
+      <form class="form-alamat">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Alamat</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <input type="hidden" id="alamat-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="alamat-provinsi">Provinsi</label>
-              <input type="text" id="alamat-provinsi" class="form-control" required />
+              <input type="text" id="alamat-provinsi" class="form-control" data-label="Provinsi" data-format="PLAIN" data-required="required" />
             </div>
             <div class="form-group col-md-6">
               <label for="alamat-kota">Kota</label>
-              <input type="text" id="alamat-kota" class="form-control" required />
+              <input type="text" id="alamat-kota" class="form-control" data-label="Kota" data-format="PLAIN" data-required="required" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="alamat-nama-jalan-1">Nama Jalan 1</label>
-              <input type="text" id="alamat-nama-jalan-1" class="form-control" />
+              <input type="text" id="alamat-nama-jalan-1" class="form-control" data-label="Nama Jalan 1" data-format="PLAIN" />
             </div>
             <div class="form-group col-md-6">
               <label for="alamat-nama-jalan-2">Nama Jalan 2</label>
-              <input type="text" id="alamat-nama-jalan-2" class="form-control" />
+              <input type="text" id="alamat-nama-jalan-2" class="form-control" data-label="Nama Jalan 2" data-format="PLAIN" />
             </div>
           </div>
           <div class="form-group">
             <label for="alamat-kode-pos">Kode Pos</label>
-            <input type="text" id="alamat-kode-pos" class="form-control" />
+            <input type="text" id="alamat-kode-pos" class="form-control" data-label="Kode Pos" data-format="PLAIN" />
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="submit-button btn btn-primary">Update</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="submit-button btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -358,40 +358,40 @@
 <div class="modal fade" id="modal-kontak" tabindex="-1" aria-hidden="true" th:fragment="modal-kontak">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Edit Kontak</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-kontak">
+      <form class="form-kontak">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Kontak</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <input type="hidden" id="kontak-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="kontak-nomor-hp">Nomor HP</label>
-              <input type="text" id="kontak-nomor-hp" class="form-control" required />
+              <input type="text" id="kontak-nomor-hp" class="form-control" data-label="Nomor HP" data-format="NUMERIC" data-required="required" />
             </div>
             <div class="form-group col-md-6">
               <label for="kontak-id-profil-facebook">ID Profil Facebook</label>
-              <input type="text" id="kontak-id-profil-facebook" class="form-control" />
+              <input type="text" id="kontak-id-profil-facebook" class="form-control" data-label="ID Profil Facebook" data-format="PLAIN" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="kontak-username-instagram">Username Instagram</label>
-              <input type="text" id="kontak-username-instagram" class="form-control" />
+              <input type="text" id="kontak-username-instagram" class="form-control" data-label="Username Instagram" data-format="PLAIN" />
             </div>
             <div class="form-group col-md-6">
               <label for="kontak-url-profil-linkedin">URL Profil Linkedin</label>
-              <input type="text" id="kontak-url-profil-linkedin" class="form-control" />
+              <input type="text" id="kontak-url-profil-linkedin" class="form-control" data-label="URL Profil Linkedin" data-format="URL" />
             </div>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="submit-button btn btn-primary">Update</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="submit-button btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
