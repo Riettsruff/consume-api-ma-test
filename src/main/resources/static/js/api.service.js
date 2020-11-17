@@ -15,6 +15,20 @@ async function AXIOS_POST(baseURL, data) {
   }
 }
 
+async function AXIOS_GET(baseURL) {
+  try {
+    const request = await axios({
+      method: "GET",
+      baseURL
+    });
+
+    const response = request.data;
+    return response;
+  } catch (e) {
+    return false;
+  }
+}
+
 function saveBasicInformation(data) {
   return AXIOS_POST(`${API_URI}/profile/basic`, data);
 }
@@ -37,4 +51,8 @@ function saveContact(data) {
 
 function saveUserRegistration(data) {
   return AXIOS_POST(`${API_URI}/register`, data);
+}
+
+function forgotPassword(email) {
+  return AXIOS_GET(`${API_URI}/forgotpassword/${email}`);
 }

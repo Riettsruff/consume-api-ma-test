@@ -53,5 +53,17 @@ $(function() {
       );
 
     break;
+
+    case "/forgot-password":
+
+      const forgotPasswordForm = $(".forgot-password-form");
+
+      forgotPasswordForm.on(
+        "click",
+        ".submit-button",
+        () => forgotPasswordFormSubmitClicked(forgotPasswordForm)
+      );
+
+    break;
   }
 });

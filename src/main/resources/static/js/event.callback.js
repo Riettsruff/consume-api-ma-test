@@ -23,7 +23,7 @@ switch(CURRENT_PATHNAME) {
     
         const save = await saveBasicInformation(requestBody);
     
-        if(save) {
+        if(save === true) {
           swal("Sukses!", "Data Informasi Dasar berhasil diupdate.", "success")
             .then(() => {
               const htmlTableBody = getInnerHTMLTableBody([
@@ -80,7 +80,7 @@ switch(CURRENT_PATHNAME) {
 
         const save = await saveCurrentOccupation(requestBody);
 
-        if(save) {
+        if(save === true) {
           swal("Sukses!", "Data Pekerjaan Saat Ini berhasil diupdate", "success")
             .then(() => {
               const htmlTableBody = getInnerHTMLTableBody([
@@ -134,7 +134,7 @@ switch(CURRENT_PATHNAME) {
 
         const save = await saveEducation(requestBody);
 
-        if(save) {
+        if(save === true) {
           swal("Sukses!", "Data Pendidikan berhasil diupdate.", "success")
             .then(() => {
               const htmlTableBody = getInnerHTMLTableBody([
@@ -193,7 +193,7 @@ switch(CURRENT_PATHNAME) {
 
         const save = await saveAddress(requestBody);
 
-        if(save) {
+        if(save === true) {
           swal("Sukses!", "Data Alamat berhasil diupdate", "success")
             .then(() => {
               const htmlTableBody = getInnerHTMLTableBody([
@@ -255,7 +255,7 @@ switch(CURRENT_PATHNAME) {
 
         const save = await saveContact(requestBody);
 
-        if(save) {
+        if(save === true) {
           swal("Sukses!", "Data Kontak berhasil diupdate.", "success")
             .then(() => {
               const htmlTableBody = getInnerHTMLTableBody([
@@ -323,14 +323,36 @@ switch(CURRENT_PATHNAME) {
 
         const save = await saveUserRegistration(requestBody);
 
-        if(save) {
-          if(save === "true") {
-            swal("Sukses!", "Pendaftaran berhasil", "success");
-          } else {
-            swal("Oops!", save, "warning");
-          }
+        if(save === true) {
+          swal("Sukses!", "Pendaftaran berhasil", "success");
         } else {
           swal("Oops!", "Pendaftaran gagal", "warning");
+        }
+      }).catch(err => {
+        swal("Oops!", err, "warning");
+      });
+    }
+
+  break;
+
+  case "/forgot-password":
+
+    function forgotPasswordFormSubmitClicked(currentForm) {
+      const htmlInput = {
+        email: currentForm.find("#email")
+      };
+
+      Promise.all(
+        Object
+          .values(htmlInput)
+          .map(item => INPUT_VALIDATION(item))
+      ).then(async () => {
+        const forgotPass = await forgotPassword(htmlInput.email.val());
+
+        if(forgotPass === true) {
+          swal("Sukses!", "Link Reset Password berhasil terkirim. Silahkan cek email Anda", "success");
+        } else {
+          swal("Oops!", "Pengiriman Link Reset Password gagal", "warning");
         }
       }).catch(err => {
         swal("Oops!", err, "warning");
