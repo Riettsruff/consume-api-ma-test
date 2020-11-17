@@ -352,7 +352,7 @@ switch(CURRENT_PATHNAME) {
         if(forgotPass === true) {
           swal("Sukses!", "Link Reset Password berhasil terkirim. Silahkan cek email Anda", "success");
         } else {
-          swal("Oops!", "Pengiriman Link Reset Password gagal", "warning");
+          swal("Oops!", forgotPass || "Pengiriman Link Reset Password gagal", "warning");
         }
       }).catch(err => {
         swal("Oops!", err, "warning");
@@ -360,5 +360,42 @@ switch(CURRENT_PATHNAME) {
     }
 
   break;
+
+  default:
+
+    if(CURRENT_PATHNAME.split("/")[1] === "forgotpassword" && CURRENT_PATHNAME.split("/")[2]) {
+      function resetPasswordFormSubmitClicked(currentForm) {
+        const htmlInput = {
+          verificationCode: currentForm.find("#verification-code"),
+          password: currentForm.find("#password")
+        };
+
+        Promise.all(
+          Object
+            .values(htmlInput)
+            .map(item => INPUT_VALIDATION(item))
+        ).then(async () => {
+          const resetPass = await resetPassword(
+            Object
+              .fromEntries(
+                Object.entries(htmlInput).map(item => {
+                  return [item[0], item[1].val()];
+                })
+              )
+          );
+
+          if(resetPass === true) {
+            swal("Sukses!", "Reset Password berhasil", "success")
+              .then(() => {
+                window.location.href = "/login";
+              });
+          } else {
+            swal("Oops!", "Reset Password gagal", "warning");
+          }
+        }).catch(err => {
+          swal("Oops!", err, "warning");
+        });
+      }
+    }
 }
 

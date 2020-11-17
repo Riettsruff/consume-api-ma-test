@@ -38,3 +38,7 @@ function saveUserRegistration(data) {
 function forgotPassword(email) {
   return AXIOS_CUSTOM("GET", `${API_URI}/forgotpassword/${email}`);
 }
+
+function resetPassword(data) {
+  return AXIOS_CUSTOM("PUT", `${API_URI}/forgotpassword/${data.verificationCode}`, { password: data.password });
+}

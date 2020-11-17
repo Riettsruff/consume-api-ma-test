@@ -1,4 +1,7 @@
-const CURRENT_PATHNAME = $(location).attr("pathname");
+const CURRENT_PATHNAME = 
+  $(location)
+    .attr("pathname")
+    .replace(/\/$/, "");
 
 $(function() {
   switch(CURRENT_PATHNAME) {
@@ -65,5 +68,17 @@ $(function() {
       );
 
     break;
+
+    default:
+
+      if(CURRENT_PATHNAME.split("/")[1] === "forgotpassword" && CURRENT_PATHNAME.split("/")[2]) {
+        const resetPasswordForm = $(".reset-password-form");
+
+        resetPasswordForm.on(
+          "click",
+          ".submit-button",
+          () => resetPasswordFormSubmitClicked(resetPasswordForm)
+        );
+      }
   }
 });
