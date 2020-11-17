@@ -1,4 +1,4 @@
-const getInnerHTMLTableBody = data => {
+function getInnerHTMLTableBody(data) {
   let html = "";
 
   data.forEach(item => {
@@ -9,4 +9,4 @@ const getInnerHTMLTableBody = data => {
   });
 
   return html;
-};
+}

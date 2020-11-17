@@ -4,7 +4,7 @@ const URL_REGEX = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const INPUT_VALIDATION = (htmlInput) => {
+function INPUT_VALIDATION(htmlInput) {
   return new Promise((resolve, reject) => {
     if(htmlInput.data("required") && !htmlInput.val()) {
       return reject(`${htmlInput.data("label")} wajib diisi`);
@@ -31,4 +31,4 @@ const INPUT_VALIDATION = (htmlInput) => {
 
     return resolve("Valid");
   });
-};
+}
