@@ -13,5 +13,5 @@ import lombok.Data;
  */
 @Data
 public class Contact {
-    String id, phone, facebook, instagram, linkedin;
+    private String id, phone, facebook, instagram, linkedin;
 }

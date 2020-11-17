@@ -13,5 +13,5 @@ import lombok.Data;
  */
 @Data
 public class Education {
-    String id, degree, university, major, status;
+    private String id, degree, university, major, status;
 }

@@ -12,6 +12,8 @@ import lombok.Data;
  * @author Riett
  */
 @Data
-public class CurrentOccupation {
-    private String id, job, currentCompany, website;
+public class University {
+    private int id, count;
+    private String name;
+    private boolean valid;
 }

@@ -11,7 +11,11 @@ import com.kapitaselekta.tts.entities.Address;
 import com.kapitaselekta.tts.entities.Contact;
 import com.kapitaselekta.tts.entities.CurrentOccupation;
 import com.kapitaselekta.tts.entities.Education;
+import com.kapitaselekta.tts.entities.Job;
+import com.kapitaselekta.tts.entities.Major;
+import com.kapitaselekta.tts.entities.University;
 import com.kapitaselekta.tts.services.rest.UserRestService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,12 +35,19 @@ public class UserController {
     
     @GetMapping("/")
     public String index(Model model) {
+        List<Job> jobs = userRestService.getJobs();
+        List<Major> majors = userRestService.getMajors();
+        List<University> universities = userRestService.getUniversities();
+        
         BasicInformation basicInformation = userRestService.getBasicInformation("USER-00099");
         Address address = userRestService.getAddress("USER-00099");
         Contact contact = userRestService.getContact("USER-00099");
         CurrentOccupation currentOccupation = userRestService.getCurrentOccupation("USER-00099");
         Education education = userRestService.getEducation("USER-00099");
         
+        model.addAttribute("jobs", jobs);
+        model.addAttribute("majors", majors);
+        model.addAttribute("universities", universities);
         model.addAttribute("basicInformation", basicInformation);
         model.addAttribute("address", address);
         model.addAttribute("contact", contact);
@@ -54,7 +65,15 @@ public class UserController {
     }
     
     @GetMapping("/register")
-    public String register() {
+    public String register(Model model) {
+        List<Job> jobs = userRestService.getJobs();
+        List<Major> majors = userRestService.getMajors();
+        List<University> universities = userRestService.getUniversities();
+        
+        model.addAttribute("jobs", jobs);
+        model.addAttribute("majors", majors);
+        model.addAttribute("universities", universities);
+        
         return "register";
     }
     

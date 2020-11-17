@@ -13,5 +13,5 @@ import lombok.Data;
  */
 @Data
 public class Address {
-    String id, province, city, street1, street2, zipCode;
+    private String id, province, city, street1, street2, zipCode;
 }

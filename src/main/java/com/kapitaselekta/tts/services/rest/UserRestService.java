@@ -11,7 +11,11 @@ import com.kapitaselekta.tts.entities.Address;
 import com.kapitaselekta.tts.entities.Contact;
 import com.kapitaselekta.tts.entities.CurrentOccupation;
 import com.kapitaselekta.tts.entities.Education;
+import com.kapitaselekta.tts.entities.Job;
+import com.kapitaselekta.tts.entities.Major;
+import com.kapitaselekta.tts.entities.University;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -99,4 +103,38 @@ public class UserRestService {
         
         return response.getBody();
     }
+    
+    public List<Job> getJobs() {
+        ResponseEntity<List<Job>> response = restTemplate.exchange(
+            uri + "/get/jobs",
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<List<Job>>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public List<Major> getMajors() {
+        ResponseEntity<List<Major>> response = restTemplate.exchange(
+            uri + "/get/majors",
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<List<Major>>() {}
+        );
+        
+        return response.getBody();
+    }
+    
+    public List<University> getUniversities() {
+        ResponseEntity<List<University>> response = restTemplate.exchange(
+            uri + "/get/majors",
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<List<University>>() {}
+        );
+        
+        return response.getBody();
+    }
+    
 }

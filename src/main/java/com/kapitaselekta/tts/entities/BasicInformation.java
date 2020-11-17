@@ -13,5 +13,5 @@ import lombok.Data;
  */
 @Data
 public class BasicInformation {
-    String id, name, email, gender, birthDate;
+    private String id, name, email, gender, birthDate;
 }
