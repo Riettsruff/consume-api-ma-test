@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Metrodata Academy Test">
@@ -8,99 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="register-wrapper">
-      <form class="register-form">
-        <h3 class="form-title">Silahkan Daftar</h3>
-        <div class="sub-form-wrapper">
-          <h6 class="sub-form-title">Informasi Dasar</h6>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-nama">Nama</label>
-              <input type="text" id="pendaftaran-nama" class="form-control" name="name" required />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-email">Email</label>
-              <input type="email" id="pendaftaran-nama" class="form-control" name="email" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-jenis-kelamin">Jenis Kelamin</label>
-              <select id="pendaftaran-jenis-kelamin" class="form-control" name="jenis-kelamin" required>
-                <option value="" disabled selected>- Pilih -</option>
-                <option value="Laki-laki">Laki-laki</option>
-                <option value="Perempuan">Perempuan</option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-tanggal-lahir">Tanggal Lahir</label>
-              <input type="text" id="pendaftaran-tanggal-lahir" class="form-control" name="tanggal-lahir" required />
-            </div>
-          </div>
-        </div>
-        <div class="sub-form-wrapper">
-          <h6 class="sub-form-title">Pekerjaan Saat Ini</h6>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-jabatan-pekerjaan">Jabatan</label>
-              <input type="text" id="pendaftaran-jabatan-pekerjaan" class="form-control" name="jabatan-pekerjaan" required />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-instansi-pekerjaan">Instansi</label>
-              <input type="text" id="pendaftaran-instansi-pekerjaan" class="form-control" name="instansi-pekerjaan" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="pendaftaran-website-pekerjaan">Website</label>
-            <input type="text" id="pendaftaran-website-pekerjaan" class="form-control" name="website-pekerjaan" required />
-          </div>
-        </div>
-        <div class="sub-form-wrapper">
-          <h6 class="sub-form-title">Pendidikan</h6>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-tingkat-pendidikan">Tingkat</label>
-              <input type="text" id="pendaftaran-tingkat-pendidikan" class="form-control" name="tingkat-pendidikan" required />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-instansi-pendidikan">Instansi</label>
-              <select id="pendaftaran-instansi-pendidikan" class="form-control" name="instansi-pendidikan" required>
-                <option value="" disabled selected>- Pilih -</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-jurusan-pendidikan">Jurusan</label>
-              <select id="pendaftaran-jurusan-pendidikan" class="form-control" name="jurusan-pendidikan" required>
-                <option value="" disabled selected>- Pilih -</option>
-              </select>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="pendaftaran-status-pendidikan">Status</label>
-              <select id="pendaftaran-status-pendidikan" class="form-control" name="status-pendidikan" required>
-                <option value="" disabled selected>- Pilih -</option>
-                <option value="Lulus">Lulus</option>
-                <option value="Belum Lulus">Belum Lulus</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="sub-form-wrapper">
-          <h6 class="sub-form-title">Kontak</h6>
-          <div class="form-group">
-            <label for="pendaftaran-nomor-hp-kontak">Nomor HP</label>
-            <input type="text" id="pendaftaran-nomor-hp-kontak" class="form-control" name="nomor-hp-kontak" required />
-          </div>
-        </div>
-        <div class="form-group register-button-form-group">
-          <button type="submit" class="btn btn-primary">Daftar</button>
-        </div>
-        <div class="form-group login-link-form-group">
-          <span>Sudah punya akun? <a href="/login">Login Sekarang</a></span>
-        </div>
-      </form>
-    </div>
+    <div th:replace="fragments/register::register-wrapper"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
