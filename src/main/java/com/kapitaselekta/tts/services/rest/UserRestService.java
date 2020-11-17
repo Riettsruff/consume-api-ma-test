@@ -128,7 +128,7 @@ public class UserRestService {
     
     public List<University> getUniversities() {
         ResponseEntity<List<University>> response = restTemplate.exchange(
-            uri + "/get/majors",
+            uri + "/get/universities",
             HttpMethod.GET,
             null,
             new ParameterizedTypeReference<List<University>>() {}
