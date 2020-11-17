@@ -105,7 +105,7 @@
           <div class="header-box-info d-flex justify-content-between align-items-center">
             <h6 class="info-title">Alamat</h6>
             <div class="info-action-wrapper">
-              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modal-alamat">Edit</button>
             </div>
           </div>
           <div class="body-box-info">
@@ -139,7 +139,7 @@
           <div class="header-box-info d-flex justify-content-between align-items-center">
             <h6 class="info-title">Kontak</h6>
             <div class="info-action-wrapper">
-              <button class="btn btn-primary">Edit</button>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#modal-kontak">Edit</button>
             </div>
           </div>
           <div class="body-box-info">
@@ -268,28 +268,29 @@
       </div>
       <div class="modal-body">
         <form class="form-pendidikan">
+          <input type="hidden" id="pendidian-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="pendaftaran-tingkat-pendidikan">Tingkat</label>
-              <input type="text" id="pendaftaran-tingkat-pendidikan" class="form-control" required />
+              <label for="tingkat-pendidikan">Tingkat</label>
+              <input type="text" id="tingkat-pendidikan" class="form-control" required />
             </div>
             <div class="form-group col-md-6">
-              <label for="pendaftaran-instansi-pendidikan">Instansi</label>
-              <select id="pendaftaran-instansi-pendidikan" class="form-control" required>
+              <label for="instansi-pendidikan">Instansi</label>
+              <select id="instansi-pendidikan" class="form-control" required>
                 <option value="" disabled selected>- Pilih -</option>
               </select>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="pendaftaran-jurusan-pendidikan">Jurusan</label>
-              <select id="pendaftaran-jurusan-pendidikan" class="form-control" required>
+              <label for="jurusan-pendidikan">Jurusan</label>
+              <select id="jurusan-pendidikan" class="form-control" required>
                 <option value="" disabled selected>- Pilih -</option>
               </select>
             </div>
             <div class="form-group col-md-6">
-              <label for="pendaftaran-status-pendidikan">Status</label>
-              <select id="pendaftaran-status-pendidikan" class="form-control" required>
+              <label for="status-pendidikan">Status</label>
+              <select id="status-pendidikan" class="form-control" required>
                 <option value="" disabled selected>- Pilih -</option>
                 <option value="Lulus">Lulus</option>
                 <option value="Belum Lulus">Belum Lulus</option>
@@ -299,7 +300,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="submit-button btn btn-primary">Update</button>
       </div>
     </div>
   </div>
@@ -364,7 +365,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="modal-kontak">
+        <form class="form-kontak">
           <input type="hidden" id="kontak-id-user" value="USER-00099" />
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -387,6 +388,9 @@
             </div>
           </div>
         </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="submit-button btn btn-primary">Update</button>
       </div>
     </div>
   </div>
