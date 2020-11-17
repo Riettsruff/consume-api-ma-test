@@ -27,19 +27,19 @@
               <tbody>
                 <tr>
                   <td class="field-name">Nama</td>
-                  <td class="field-value">Rietts Andreas Ruff</td>
+                  <td class="field-value" th:text="${basicInformation.name}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Email</td>
-                  <td class="field-value">riettsruff@gmail.com</td>
+                  <td class="field-value" th:text="${basicInformation.email}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Jenis Kelamin</td>
-                  <td class="field-value">Laki-laki</td>
+                  <td class="field-value" th:text="${basicInformation.gender}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Tanggal Lahir</td>
-                  <td class="field-value">05-12-2000</td>
+                  <td class="field-value" th:text="${basicInformation.birthDate}"></td>
                 </tr>
               </tbody>
             </table>
@@ -57,15 +57,15 @@
               <tbody>
                 <tr>
                   <td class="field-name">Jabatan</td>
-                  <td class="field-value">Mahasiswa</td>
+                  <td class="field-value" th:text="${currentOccupation.job}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Instansi</td>
-                  <td class="field-value">Universitas Kristen Satya Wacana</td>
+                  <td class="field-value" th:text="${currentOccupation.currentCompany}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Website</td>
-                  <td class="field-value">https://uksw.edu</td>
+                  <td class="field-value" th:text="${currentOccupation.website}"></td>
                 </tr>
               </tbody>
             </table>
@@ -83,19 +83,19 @@
               <tbody>
                 <tr>
                   <td class="field-name">Tingkat</td>
-                  <td class="field-value">Strata 1</td>
+                  <td class="field-value" th:text="${education.degree}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Instansi</td>
-                  <td class="field-value">Universitas Kristen Satya Wacana</td>
+                  <td class="field-value" th:text="${education.university}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Jurusan</td>
-                  <td class="field-value">Teknik Informatika</td>
+                  <td class="field-value" th:text="${education.major}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Status</td>
-                  <td class="field-value">Belum Lulus</td>
+                  <td class="field-value" th:text="${education.status}"></td>
                 </tr>
               </tbody>
             </table>
@@ -113,23 +113,23 @@
               <tbody>
                 <tr>
                   <td class="field-name">Provinsi</td>
-                  <td class="field-value">Jawa Tengah</td>
+                  <td class="field-value" th:text="${address.province}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Kota</td>
-                  <td class="field-value">Salatiga</td>
+                  <td class="field-value" th:text="${address.city}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Nama Jalan 1</td>
-                  <td class="field-value">Jl. Turen 1 No.86 M</td>
+                  <td class="field-value" th:text="${address.street1}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Nama Jalan 2</td>
-                  <td class="field-value">-</td>
+                  <td class="field-value" th:text="${address.street2}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Kode Pos</td>
-                  <td class="field-value">50714</td>
+                  <td class="field-value" th:text="${address.zipCode}"></td>
                 </tr>
               </tbody>
             </table>
@@ -147,20 +147,20 @@
               <tbody>
                 <tr>
                   <td class="field-name">Nomor HP</td>
-                  <td class="field-value">081327785905</td>
+                  <td class="field-value" th:text="${contact.phone}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">ID Profil Facebook</td>
-                  <td class="field-value">921828128182</td>
+                  <td class="field-value" th:text="${contact.facebook}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">Username Instagram</td>
-                  <td class="field-value">riettsruff</td>
+                  <td class="field-value" th:text="${contact.instagram}"></td>
                 </tr>
                 <tr>
                   <td class="field-name">URL Profil Linkedin</td>
                   <td class="field-value">
-                    <a href="https://riettsruff.com">https://riettsruff.com</a>
+                    <a th:href="${contact.linkedin}" th:text="${contact.linkedin}"></a>
                   </td>
                 </tr>
               </tbody>
@@ -184,21 +184,21 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="hidden" id="informasi-dasar-id-user" value="USER-00099" />
+          <input type="hidden" id="informasi-dasar-id-user" th:field="*{basicInformation.id}" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="informasi-dasar-nama">Nama</label>
-              <input type="text" id="informasi-dasar-nama" class="form-control" data-label="Nama" data-format="PLAIN" data-required="required" />
+              <input type="text" id="informasi-dasar-nama" class="form-control" data-label="Nama" data-format="PLAIN" data-required="required" th:field="*{basicInformation.name}" />
             </div>
             <div class="form-group col-md-6">
               <label for="informasi-dasar-email">Email</label>
-              <input type="text" id="informasi-dasar-email" class="form-control" data-label="Email" data-format="EMAIL" data-required="required" />
+              <input type="text" id="informasi-dasar-email" class="form-control" data-label="Email" data-format="EMAIL" data-required="required" th:field="*{basicInformation.email}" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="informasi-dasar-jenis-kelamin">Jenis Kelamin</label>
-              <select id="informasi-dasar-jenis-kelamin" class="form-control" data-label="Jenis Kelamin" data-format="PLAIN" data-required="required">
+              <select id="informasi-dasar-jenis-kelamin" class="form-control" data-label="Jenis Kelamin" data-format="PLAIN" data-required="required" th:field="*{basicInformation.gender}">
                 <option value="" disabled selected>- Pilih -</option>
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
@@ -206,7 +206,7 @@
             </div>
             <div class="form-group col-md-6">
               <label for="informasi-dasar-tanggal-lahir">Tanggal Lahir</label>
-              <input type="text" id="informasi-dasar-tanggal-lahir" class="form-control" data-label="Tanggal Lahir" data-format="PLAIN" data-required="required" />
+              <input type="text" id="informasi-dasar-tanggal-lahir" class="form-control" data-label="Tanggal Lahir" data-format="PLAIN" data-required="required" th:field="*{basicInformation.birthDate}" />
             </div>
           </div>
         </div>
@@ -231,20 +231,20 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="hidden" id="pekerjaan-saat-ini-id-user" value="USER-00099" />
+          <input type="hidden" id="pekerjaan-saat-ini-id-user" th:field="*{currentOccupation.id}" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="jabatan-pekerjaan-saat-ini">Jabatan</label>
-              <input type="text" id="jabatan-pekerjaan-saat-ini" class="form-control" data-label="Jabatan" data-format="PLAIN" data-required="required" />
+              <input type="text" id="jabatan-pekerjaan-saat-ini" class="form-control" data-label="Jabatan" data-format="PLAIN" data-required="required" th:field="*{currentOccupation.job}" />
             </div>
             <div class="form-group col-md-6">
               <label for="instansi-pekerjaan-saat-ini">Instansi</label>
-              <input type="text" id="instansi-pekerjaan-saat-ini" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required" />
+              <input type="text" id="instansi-pekerjaan-saat-ini" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required" th:field="*{currentOccupation.currentCompany}" />
             </div>
           </div>
           <div class="form-group">
             <label for="website-pekerjaan-saat-ini">Website</label>
-            <input type="text" id="website-pekerjaan-saat-ini" class="form-control" data-label="Website" data-format="URL" data-required="required" />
+            <input type="text" id="website-pekerjaan-saat-ini" class="form-control" data-label="Website" data-format="URL" data-required="required" th:field="*{currentOccupation.website}" />
           </div>
         </div>
         <div class="modal-footer">
@@ -268,29 +268,31 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="hidden" id="pendidian-id-user" value="USER-00099" />
+          <input type="hidden" id="pendidikan-id-user" th:field="*{education.id}" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="tingkat-pendidikan">Tingkat</label>
-              <input type="text" id="tingkat-pendidikan" class="form-control" data-label="Tingkat" data-format="PLAIN" data-required="required" />
+              <input type="text" id="tingkat-pendidikan" class="form-control" data-label="Tingkat" data-format="PLAIN" data-required="required" th:field="*{education.degree}" />
             </div>
             <div class="form-group col-md-6">
               <label for="instansi-pendidikan">Instansi</label>
-              <select id="instansi-pendidikan" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required">
+              <select id="instansi-pendidikan" class="form-control" data-label="Instansi" data-format="PLAIN" data-required="required" th:field="*{education.university}">
                 <option value="" disabled selected>- Pilih -</option>
+                <option th:each="university : ${universities}" th:value="${university.name}" th:text="${university.name}"></option>
               </select>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="jurusan-pendidikan">Jurusan</label>
-              <select id="jurusan-pendidikan" class="form-control" data-label="Jurusan" data-format="PLAIN" data-required="required">
+              <select id="jurusan-pendidikan" class="form-control" data-label="Jurusan" data-format="PLAIN" data-required="required" th:field="*{education.major}">
                 <option value="" disabled selected>- Pilih -</option>
+                <option th:each="major : ${majors}" th:value="${major.name}" th:text="${major.name}"></option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="status-pendidikan">Status</label>
-              <select id="status-pendidikan" class="form-control" data-label="Status" data-format="PLAIN" data-required="required">
+              <select id="status-pendidikan" class="form-control" data-label="Status" data-format="PLAIN" data-required="required" th:field="*{education.status}">
                 <option value="" disabled selected>- Pilih -</option>
                 <option value="Lulus">Lulus</option>
                 <option value="Belum Lulus">Belum Lulus</option>
@@ -319,30 +321,30 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="hidden" id="alamat-id-user" value="USER-00099" />
+          <input type="hidden" id="alamat-id-user" th:field="*{address.id}" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="alamat-provinsi">Provinsi</label>
-              <input type="text" id="alamat-provinsi" class="form-control" data-label="Provinsi" data-format="PLAIN" data-required="required" />
+              <input type="text" id="alamat-provinsi" class="form-control" data-label="Provinsi" data-format="PLAIN" data-required="required" th:field="*{address.province}" />
             </div>
             <div class="form-group col-md-6">
               <label for="alamat-kota">Kota</label>
-              <input type="text" id="alamat-kota" class="form-control" data-label="Kota" data-format="PLAIN" data-required="required" />
+              <input type="text" id="alamat-kota" class="form-control" data-label="Kota" data-format="PLAIN" data-required="required" th:field="*{address.city}" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="alamat-nama-jalan-1">Nama Jalan 1</label>
-              <input type="text" id="alamat-nama-jalan-1" class="form-control" data-label="Nama Jalan 1" data-format="PLAIN" />
+              <input type="text" id="alamat-nama-jalan-1" class="form-control" data-label="Nama Jalan 1" data-format="PLAIN" th:field="*{address.street1}" />
             </div>
             <div class="form-group col-md-6">
               <label for="alamat-nama-jalan-2">Nama Jalan 2</label>
-              <input type="text" id="alamat-nama-jalan-2" class="form-control" data-label="Nama Jalan 2" data-format="PLAIN" />
+              <input type="text" id="alamat-nama-jalan-2" class="form-control" data-label="Nama Jalan 2" data-format="PLAIN" th:field="*{address.street2}" />
             </div>
           </div>
           <div class="form-group">
             <label for="alamat-kode-pos">Kode Pos</label>
-            <input type="text" id="alamat-kode-pos" class="form-control" data-label="Kode Pos" data-format="PLAIN" />
+            <input type="text" id="alamat-kode-pos" class="form-control" data-label="Kode Pos" data-format="PLAIN" th:field="*{address.zipCode}" />
           </div>
         </div>
         <div class="modal-footer">
@@ -366,25 +368,25 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="hidden" id="kontak-id-user" value="USER-00099" />
+          <input type="hidden" id="kontak-id-user" th:field="*{contact.id}" />
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="kontak-nomor-hp">Nomor HP</label>
-              <input type="text" id="kontak-nomor-hp" class="form-control" data-label="Nomor HP" data-format="NUMERIC" data-required="required" />
+              <input type="text" id="kontak-nomor-hp" class="form-control" data-label="Nomor HP" data-format="NUMERIC" data-required="required" th:field="*{contact.phone}" />
             </div>
             <div class="form-group col-md-6">
               <label for="kontak-id-profil-facebook">ID Profil Facebook</label>
-              <input type="text" id="kontak-id-profil-facebook" class="form-control" data-label="ID Profil Facebook" data-format="PLAIN" />
+              <input type="text" id="kontak-id-profil-facebook" class="form-control" data-label="ID Profil Facebook" data-format="PLAIN" th:field="*{contact.facebook}" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="kontak-username-instagram">Username Instagram</label>
-              <input type="text" id="kontak-username-instagram" class="form-control" data-label="Username Instagram" data-format="PLAIN" />
+              <input type="text" id="kontak-username-instagram" class="form-control" data-label="Username Instagram" data-format="PLAIN" th:field="*{contact.instagram}" />
             </div>
             <div class="form-group col-md-6">
               <label for="kontak-url-profil-linkedin">URL Profil Linkedin</label>
-              <input type="text" id="kontak-url-profil-linkedin" class="form-control" data-label="URL Profil Linkedin" data-format="URL" />
+              <input type="text" id="kontak-url-profil-linkedin" class="form-control" data-label="URL Profil Linkedin" data-format="URL" th:field="*{contact.linkedin}" />
             </div>
           </div>
         </div>
