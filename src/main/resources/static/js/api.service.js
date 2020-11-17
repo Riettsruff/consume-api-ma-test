@@ -34,3 +34,7 @@ function saveAddress(data) {
 function saveContact(data) {
   return AXIOS_POST(`${API_URI}/profile/contact`, data);
 }
+
+function saveUserRegistration(data) {
+  return AXIOS_POST(`${API_URI}/register`, data);
+}

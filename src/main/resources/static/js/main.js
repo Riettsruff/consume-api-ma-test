@@ -13,31 +13,31 @@ $(function() {
       modalBasicInformation.on(
         "click", 
         ".submit-button", 
-        () => modalBasicInformationClicked(modalBasicInformation)
+        () => modalBasicInformationSubmitClicked(modalBasicInformation)
       );  
 
       modalCurrentOccupation.on(
         "click", 
         ".submit-button",
-        () => modalCurrentOccupationClicked(modalCurrentOccupation)
+        () => modalCurrentOccupationSubmitClicked(modalCurrentOccupation)
       );
 
       modalEducation.on(
         "click", 
         ".submit-button", 
-        () => modalEducationClicked(modalEducation)
+        () => modalEducationSubmitClicked(modalEducation)
       );
 
       modalAddress.on(
         "click", 
         ".submit-button", 
-        () => modalAddressClicked(modalAddress)
+        () => modalAddressSubmitClicked(modalAddress)
       );
 
       modalContact.on(
         "click", 
         ".submit-button",
-        () => modalContactClicked(modalContact)
+        () => modalContactSubmitClicked(modalContact)
       );
 
     break;
@@ -46,9 +46,11 @@ $(function() {
 
       const registerForm = $(".register-form");
 
-      registerForm.on("click", ".submit-button", () => {
-        
-      });
+      registerForm.on(
+        "click", 
+        ".submit-button", 
+        () => registerFormSubmitClicked(registerForm)
+      );
 
     break;
   }

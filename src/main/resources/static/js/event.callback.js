@@ -1,7 +1,7 @@
 switch(CURRENT_PATHNAME) {
   case "/":
 
-    function modalBasicInformationClicked(currentModal) {
+    function modalBasicInformationSubmitClicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#informasi-dasar-id-user"),
         name: currentModal.find("#informasi-dasar-nama"),
@@ -59,7 +59,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalCurrentOccupationClicked(currentModal) {
+    function modalCurrentOccupationSubmitClicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#pekerjaan-saat-ini-id-user"),
         job: currentModal.find("#jabatan-pekerjaan-saat-ini"),
@@ -112,7 +112,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalEducationClicked(currentModal) {
+    function modalEducationCSubmitlicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#pendidikan-id-user"),
         degree: currentModal.find("#tingkat-pendidikan"),
@@ -170,7 +170,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalAddressClicked(currentModal) {
+    function modalAddressCSubmitlicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#alamat-id-user"),
         province: currentModal.find("#alamat-provinsi"),
@@ -233,7 +233,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalContactClicked() {
+    function modalContactCSubmitlicked() {
       const htmlInput = {
         id: currentModal.find("#kontak-id-user"),
         phone: currentModal.find("#kontak-nomor-hp"),
@@ -295,7 +295,47 @@ switch(CURRENT_PATHNAME) {
 
   case "/register":
 
-    
+    function registerFormSubmitClicked(currentForm) {
+      const htmlInput = {
+        name: currentForm.find("#pendaftaran-nama"),
+        email: currentForm.find("#pendaftaran-email"),
+        gender: currentForm.find("#pendaftaran-jenis-kelamin"),
+        birthDate: currentForm.find("#pendaftaran-tanggal-lahir"),
+        job: currentForm.find("#pendaftaran-jabatan-pekerjaan"),
+        currentCompany: currentForm.find("#pendaftaran-instansi-pekerjaan"),
+        degree: currentForm.find("#pendaftaran-tingkat-pendidikan"),
+        university: currentForm.find("#pendaftaran-instansi-pendidikan"),
+        major: currentForm.find("#pendaftaran-jurusan-pendidikan"),
+        status: currentForm.find("#pendaftaran-status-pendidikan"),
+        phone: currentForm.find("#pendaftaran-nomor-hp-kontak")
+      };
+
+      Promise.all(
+        Object
+          .values(htmlInput)
+          .map(item => INPUT_VALIDATION(item))
+      ).then(async () => {
+        const requestBody = Object.fromEntries(
+          Object.entries(htmlInput).map(item => {
+            return [item[0], item[1].val()];
+          })
+        );
+
+        const save = await saveUserRegistration(requestBody);
+
+        if(save) {
+          if(save === "true") {
+            swal("Sukses!", "Pendaftaran berhasil", "success");
+          } else {
+            swal("Oops!", save, "warning");
+          }
+        } else {
+          swal("Oops!", "Pendaftaran gagal", "warning");
+        }
+      }).catch(err => {
+        swal("Oops!", err, "warning");
+      });
+    }
 
   break;
 }
