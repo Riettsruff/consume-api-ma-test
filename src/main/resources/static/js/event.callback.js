@@ -112,7 +112,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalEducationCSubmitlicked(currentModal) {
+    function modalEducationSubmitClicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#pendidikan-id-user"),
         degree: currentModal.find("#tingkat-pendidikan"),
@@ -170,7 +170,7 @@ switch(CURRENT_PATHNAME) {
       });
     }
 
-    function modalAddressCSubmitlicked(currentModal) {
+    function modalAddressSubmitClicked(currentModal) {
       const htmlInput = {
         id: currentModal.find("#alamat-id-user"),
         province: currentModal.find("#alamat-provinsi"),

@@ -14,7 +14,7 @@ $(function() {
         "click", 
         ".submit-button", 
         () => modalBasicInformationSubmitClicked(modalBasicInformation)
-      );  
+      );
 
       modalCurrentOccupation.on(
         "click", 
