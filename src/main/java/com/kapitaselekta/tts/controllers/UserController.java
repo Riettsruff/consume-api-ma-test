@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 /**
@@ -39,13 +40,14 @@ public class UserController {
         return "register";
     }
     
-    @GetMapping("/forgot-password")
+    @GetMapping("/forgotpassword")
     public String forgotPassword() {
         return "forgot-password";
     }
     
-    @GetMapping("/reset-password")
-    public String resetPassword() {
+    @GetMapping("/forgotpassword/{verificationCode}")
+    public String resetPassword(Model model, @PathVariable String verificationCode) {
+        model.addAttribute("verificationCode", verificationCode);
         return "reset-password";
     }
     
