@@ -301,6 +301,8 @@ switch(CURRENT_PATHNAME) {
         email: currentForm.find("#pendaftaran-email"),
         gender: currentForm.find("#pendaftaran-jenis-kelamin"),
         birthDate: currentForm.find("#pendaftaran-tanggal-lahir"),
+        username: currentForm.find("#pendaftaran-username"),
+        password: currentForm.find("#pendaftaran-password"),
         job: currentForm.find("#pendaftaran-jabatan-pekerjaan"),
         currentCompany: currentForm.find("#pendaftaran-instansi-pekerjaan"),
         degree: currentForm.find("#pendaftaran-tingkat-pendidikan"),
@@ -324,7 +326,10 @@ switch(CURRENT_PATHNAME) {
         const save = await saveUserRegistration(requestBody);
 
         if(save === true) {
-          swal("Sukses!", "Pendaftaran berhasil", "success");
+          swal("Sukses!", "Pendaftaran berhasil. Silahkan verifikasi email anda melalui link pada pesan yang baru saja dikirim.", "success")
+            .then(() => {
+              window.location.href = "/login";
+            });
         } else {
           swal("Oops!", "Pendaftaran gagal", "warning");
         }
