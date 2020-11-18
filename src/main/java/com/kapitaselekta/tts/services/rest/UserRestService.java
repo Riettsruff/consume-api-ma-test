@@ -6,6 +6,7 @@
 package com.kapitaselekta.tts.services.rest;
 
 import com.kapitaselekta.tts.entities.LoginInput;
+import com.kapitaselekta.tts.entities.LoginOutput;
 import com.kapitaselekta.tts.entities.BasicInformation;
 import com.kapitaselekta.tts.entities.Address;
 import com.kapitaselekta.tts.entities.Contact;
@@ -20,6 +21,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -38,15 +40,15 @@ public class UserRestService {
     @Value("${api.uri}")
     private String uri;
     
-    public String login(LoginInput loginInput) {
-        Map<String, String> args = new HashMap<String, String>();
+    public LoginOutput login(LoginInput loginInput) {
+        ResponseEntity<LoginOutput> response = restTemplate.exchange(
+            uri + "/login",
+            HttpMethod.POST,
+            new HttpEntity<>(loginInput, null),
+            new ParameterizedTypeReference<LoginOutput>() {}
+        );
         
-        args.put("email", loginInput.getEmail());
-        args.put("password", loginInput.getPassword());
-        
-        String result = restTemplate.postForObject(uri + "/login", args, String.class);
-        
-        return result;
+        return response.getBody();
     }
     
     public BasicInformation getBasicInformation(String id) {
