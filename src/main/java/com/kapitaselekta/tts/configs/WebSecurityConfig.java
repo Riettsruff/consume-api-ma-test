@@ -29,13 +29,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     "/js/**", 
                     "/img/**", 
                     "/register", 
-                    "/forgotpassword/**"
+                    "/forgotpassword/**",
+                    "/"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
                 .loginPage("/login")
-                .loginProcessingUrl("/login")
                 .permitAll()
                 .and()
             .logout()
