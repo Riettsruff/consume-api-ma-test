@@ -6,6 +6,7 @@
 package com.kapitaselekta.tts.controllers;
 
 import com.kapitaselekta.tts.entities.LoginInput;
+import com.kapitaselekta.tts.entities.LoginOutput;
 import com.kapitaselekta.tts.entities.BasicInformation;
 import com.kapitaselekta.tts.entities.Address;
 import com.kapitaselekta.tts.entities.Contact;
@@ -22,6 +23,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -63,6 +65,21 @@ public class UserController {
         
         return "login";
     }
+    
+//    @PostMapping("/login")
+//    public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
+//        LoginInput loginInput = new LoginInput();
+//        loginInput.setEmail(email);
+//        loginInput.setPassword(password);
+//        
+//        LoginOutput loginOutput = userRestService.login(loginInput);
+//        
+//        if(loginOutput == null) {
+//            return "redirect:/forgotpassword";
+//        }
+//        
+//        return "redirect:/";
+//    }
     
     @GetMapping("/register")
     public String register(Model model) {
