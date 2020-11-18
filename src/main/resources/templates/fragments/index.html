@@ -4,11 +4,13 @@
       <div class="container">
         <div class="inner-header-profile d-flex justify-content-between">
           <div class="header-main-content d-flex flex-column">
-            <span class="greetings-text">Hi, <span class="emphasis-text">There.</span></span>
+            <span class="greetings-text">Hi, <span class="emphasis-text">[[${#httpServletRequest.remoteUser}]]</span></span>
             <span class="info-text">Selamat Datang di Halaman Profil Anda.</span>
           </div>
           <div class="header-nav">
-            <a href="logout" class="logout-button btn btn-danger">Logout</a>
+              <form th:action="@{/logout}" method="post">
+                  <button type="submit" class="logout-button btn btn-danger">Logout</button>
+              </form>
           </div>
         </div>
       </div>

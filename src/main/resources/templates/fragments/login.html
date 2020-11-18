@@ -1,6 +1,10 @@
 <div class="login-wrapper d-flex justify-content-center align-items-center" th:fragment="login-wrapper">
-  <form class="login-form" method="POST" action="/login">
+  <form class="login-form" method="POST" th:action="@{/login}">
     <h3 class="form-title">Silahkan Login</h3>
+    <div class="form-group">
+        <div th:if="${param.error}" class="alert alert-danger" role="alert">Email/Password tidak sesuai. Masukkan ulang.</div>
+        <div th:if="${param.logout}" class="alert alert-success" role="alert">Anda berhasil logout.</div>
+    </div>
     <div class="form-group">
       <input type="email" class="form-control" name="email" placeholder="Email" required />
     </div>
