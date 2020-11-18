@@ -10,6 +10,12 @@ $(function() {
       const modalAddress = $("#modal-alamat");
       const modalContact = $("#modal-kontak");
 
+      modalBasicInformation
+        .find("#informasi-dasar-tanggal-lahir")
+        .datepicker({
+          format: 'yyyy-mm-dd'
+        });
+
       modalBasicInformation.on(
         "click", 
         ".submit-button", 
@@ -45,6 +51,12 @@ $(function() {
     case "/register":
 
       const registerForm = $(".register-form");
+
+      registerForm
+        .find("#pendaftaran-tanggal-lahir")
+        .datepicker({
+          format: 'yyyy-mm-dd'
+        });
 
       registerForm.on(
         "click", 
