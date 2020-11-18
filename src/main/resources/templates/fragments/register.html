@@ -5,12 +5,22 @@
       <h6 class="sub-form-title">Informasi Dasar</h6>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="pendaftaran-nama">Nama</label>
-          <input type="text" id="pendaftaran-nama" class="form-control" data-label="Nama" data-format="PLAIN" data-required="required" />
+          <label for="pendaftaran-nama">Nama Lengkap</label>
+          <input type="text" id="pendaftaran-nama" class="form-control" data-label="Nama Lengkap" data-format="PLAIN" data-required="required" />
         </div>
         <div class="form-group col-md-6">
           <label for="pendaftaran-email">Email</label>
           <input type="email" id="pendaftaran-email" class="form-control" data-label="Email" data-format="EMAIL" data-required="required" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="pendaftaran-username">Username</label>
+          <input type="text" id="pendaftaran-username" class="form-control" data-label="Username" data-format="PLAIN" data-required="required" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="pendaftaran-password">Password</label>
+          <input type="password" id="pendaftaran-password" class="form-control" data-label="Password" data-format="PLAIN" data-required="required" />
         </div>
       </div>
       <div class="form-row">
@@ -52,6 +62,7 @@
           <label for="pendaftaran-instansi-pendidikan">Instansi</label>
           <select id="pendaftaran-instansi-pendidikan" class="form-control" data-label="Instansi Pendidikan" data-format="PLAIN" data-required="required">
             <option value="" disabled selected>- Pilih -</option>
+            <option th:each="university : ${universities}" th:value="${university.name}" th:text="${university.name}"></option>
           </select>
         </div>
       </div>
@@ -60,6 +71,7 @@
           <label for="pendaftaran-jurusan-pendidikan">Jurusan</label>
           <select id="pendaftaran-jurusan-pendidikan" class="form-control" data-label="Jurusan Pendidikan" data-format="PLAIN" data-required="required">
             <option value="" disabled selected>- Pilih -</option>
+            <option th:each="major : ${majors}" th:value="${major.name}" th:text="${major.name}"></option>
           </select>
         </div>
         <div class="form-group col-md-6">
